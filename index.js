@@ -2,11 +2,15 @@ const express = require('express');
 const app = express();
 
 const {Server} = require('socket.io')
-const http = require('http')
+const http = require('http');
+const { writeFile } = require('fs');
 const server = http.createServer(app);
 const io = new Server(server);
 const port = 4000;
 app.get('/',(req,res)=>{
+    writeFile
+    readFile
+    
     res.sendFile(__dirname + '/index.html');
 })
 
